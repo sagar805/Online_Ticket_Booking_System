@@ -1,12 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Online_Ticket_Booking_System</title>
+  <meta charset="UTF-8">
+  <title>Ticket Booking Form</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
-    
+
+  <div class="form-container">
+    <img src="./Ticket.jpg" alt="Ticket Booking" class="banner-img" style="margin-right: 20px; width: 100%; border: 4px solid #ccc;">
+
+    <h1>Ticket Booking Form</h1>
+
+    <form id="bookingForm">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Enter the name" required>
+      <small>Enter full name</small>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Sagar@sample.com" required>
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" placeholder="000 000 0000" required>
+
+      <label for="datetime">Booking Date & Time</label>
+      <input type="datetime-local" id="datetime" name="datetime" required>
+
+      <label>Choose Ticket Type</label>
+      <div class="radio-group">
+        <label><input type="radio" name="ticketType" value="Standard" checked> Standard</label>
+        <label><input type="radio" name="ticketType" value="VIP"> VIP</label>
+      </div>
+
+      <label for="tickets">Number of tickets</label>
+      <input type="number" id="tickets" name="tickets" min="1" placeholder="Type your answer here" required>
+
+      <label for="comments">Additional comments</label>
+      <textarea id="comments" name="comments" placeholder="Type your answer here"></textarea>
+
+      <button type="submit">Pay & Book</button>
+    </form>
+
+    <p id="confirmation"></p>
+  </div>
+
+  
+
+  <script src="script.js"></script>
 </body>
 </html>
