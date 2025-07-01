@@ -8,10 +8,7 @@
 <body>
 
   <div class="background-image">
-    
     <div class="login-container">
-      
-
       <div class="form-wrapper">
         <header>
           <h1>Online Ticket Booking</h1>
@@ -44,6 +41,16 @@
 
             <label for="datetime">Booking Date & Time</label>
             <input type="datetime-local" id="datetime" required />
+
+            <label for="paymentMode">Payment Mode</label>
+            <select id="paymentMode" required>
+              <option value="">-- Select Payment Mode --</option>
+              <option value="Credit Card">Credit Card</option>
+              <option value="Debit Card">Debit Card</option>
+              <option value="UPI">UPI</option>
+              <option value="Net Banking">Net Banking</option>
+              <option value="Cash on Delivery">Cash on Delivery</option>
+            </select>
 
             <label for="comments">Additional Comments</label>
             <textarea id="comments" rows="3" placeholder="Write here..."></textarea>
