@@ -30,10 +30,23 @@
         <section class="booking-section hidden" id="bookingSection">
           <h2>Book Your Ticket</h2>
           <form id="bookingForm">
-            <label>Ticket Type</label>
-            <div class="radio-group">
-              <label><input type="radio" name="ticket" value="200" checked> Standard – ₹200</label>
-              <label><input type="radio" name="ticket" value="500"> VIP – ₹500</label>
+
+            <label for="from">From</label>
+            <input type="text" id="from" placeholder="Starting Location" required />
+
+            <label for="to">To</label>
+            <input type="text" id="to" placeholder="Destination" required />
+
+            <label for="mode">Travel Mode</label>
+            <select id="mode" required>
+              <option value="">-- Select Mode --</option>
+              <option value="Train">Train</option>
+              <option value="Flight">Flight</option>
+              <option value="Bus">Bus</option>
+            </select>
+
+            <div id="ticketOptions" class="ticket-options">
+              <!-- Ticket options will be inserted here dynamically -->
             </div>
 
             <label for="quantity">Number of Tickets</label>

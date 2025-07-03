@@ -8,7 +8,7 @@ body, html {
 /* Background Styling */
 .background-image {
   background-image: url("Ticket.jpg");
-  background-size: 100%; 
+  background-size: cover;
   background-attachment: fixed;
   min-height: 100vh;
   display: flex;
@@ -23,16 +23,8 @@ body, html {
   -webkit-backdrop-filter: blur(10px);
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(0,0,0,0.3);
-}
-
-/* Optional Image (Unused but preserved) */
-.login-image {
-  display: block;
+  max-width: 420px;
   width: 100%;
-  max-height: 150px;
-  object-fit: cover;
-  border-bottom: 2px solid #ccc;
-  margin-bottom: 15px;
 }
 
 /* Inner Form Wrapper */
@@ -43,6 +35,8 @@ body, html {
 /* Header */
 header h1 {
   text-align: center;
+  font-size: 24px;
+  color: #000;
 }
 
 /* Section Spacing */
@@ -57,7 +51,7 @@ label {
   font-weight: bold;
 }
 
-/* Inputs, Textareas */
+/* Inputs, Textareas, Selects */
 input,
 textarea,
 select {
@@ -67,6 +61,19 @@ select {
   border-radius: 5px;
   border: 1px solid #ccc;
   box-sizing: border-box;
+}
+
+/* Radio Button Group */
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+/* Ticket options container */
+.ticket-options {
+  margin-top: 10px;
 }
 
 /* Buttons */
@@ -87,13 +94,6 @@ button:hover {
   background-color: #218838;
 }
 
-/* Radio Button Group */
-.radio-group {
-  display: flex;
-  gap: 10px;
-  margin-top: 10px;
-}
-
 /* Summary Box */
 .summary {
   margin-top: 15px;
@@ -101,6 +101,8 @@ button:hover {
   background: #f4f4f4;
   border-radius: 5px;
   font-weight: bold;
+  color: #333;
+  border: 1px solid #ccc;
 }
 
 /* Hidden Class */
